@@ -1,0 +1,24 @@
+.listProjects__container{
+    max-width: 1800px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 8vw;
+    padding-left: 8vw;
+    margin-bottom: 8vw;
+    margin-top: 8vw;
+}
+
+
+.listProjects{
+   display: grid;
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(
+        200px, /* min value */
+        1fr /* max value */
+      )
+    );
+  grid-gap: 20px;
+
+}

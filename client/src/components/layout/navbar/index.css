@@ -1,0 +1,32 @@
+.container{
+    padding: 0 30px;
+}
+.navbar__container{
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar__menu{
+    display: flex;
+    overflow: hidden;
+    padding: 17px 25px;
+    align-items: center;
+    border: 3px solid #000;
+    border-radius: 3px;
+    background-color: #fff;
+    transition: .2s ease;
+}
+.link{
+    display: block;
+    padding-right: 18px;
+    padding-left: 18px;
+    transition: color .3s ease;
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1.4em;
+}
+.link:hover{
+   color: rgb(85, 85, 85);
+}

@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+html {
+  width: 100%;
+  height: 100%;
+  display: table;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  display: table-cell;
+  margin: 0;
+  padding: 0;
+  background-image: url(//cdn.shopify.com/s/files/1/0251/9524/9748/t/48/assets/bg-texture-tileable-compressed.jpg?v=9300424579338767580);
+  background-position: 0 0;
+  background-size: 100%;
+  background-repeat: repeat-y;
+  font-family: "Roboto Mono", monospace;
+  color: #000;
+  font-size: 16px;
+  line-height: 1.4375em;
+  font-weight: 500;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

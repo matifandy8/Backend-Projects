@@ -1,0 +1,39 @@
+.Form {
+  display: flex;
+  max-width: 450px;
+  margin-top: 56px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #000;
+  border-radius: 3px;
+  background-color: #fff;
+}
+.input__todo {
+  width: 100%;
+  padding: 10px;
+  display: inline-block;
+  height: auto;
+  margin-bottom: 0;
+  border: 1px none #000;
+  background-color: transparent;
+  color: #000;
+  font-size: 1.125em;
+}
+.input__todo:focus {
+  outline: none;
+}
+.button__add {
+  cursor: pointer;
+  width: 175px;
+  margin-top: 0;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  font-family: "Roboto Mono", monospace;
+}
+
+.button__add:hover {
+  color: rgb(92, 92, 92);
+}
