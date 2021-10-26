@@ -6,7 +6,7 @@ const FormUrl = () => {
   const [format, setFormat] = useState("");
   const [quality, setQuality] = useState("");
 
-  const serverURL = "http://localhost:8000";
+  const serverURL = "http://localhost:4000/youtube";
 
   const fetchDownload = () => {
     fetch(`${serverURL}/check-download?URL=${url}`).then((res: any) => {

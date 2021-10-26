@@ -5,6 +5,10 @@ let bodyParser = require("body-parser");
 let mongoDb = require("./db");
 
 const TodoRoute = require("./todo.route");
+const NewsRoute = require("./news.route");
+const YoutubeRoute = require("./youtube.route");
+
+
 
 mongoose.Promise = global.Promise;
 mongoose
@@ -31,6 +35,10 @@ app.use(
 
 app.use(cors());
 app.use("/", TodoRoute);
+app.use("/news", NewsRoute);
+app.use("/youtube", YoutubeRoute);
+
+
 
 const port = process.env.PORT || 4000;
 const server = app.listen(port, () => {
