@@ -1,6 +1,10 @@
 .Card {
-  display: flex;
-  margin: 20px;
+  border: 1pxsolid;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 20px;
+    background-color: white;
 }
 
 .Card--button {

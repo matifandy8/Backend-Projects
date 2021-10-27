@@ -64,14 +64,14 @@ const Todo: React.FC = () => {
 
   return (
     <div className="todos">
-      <h1>My Todos</h1>
+      <h1>Todos</h1>
       <AddTodo saveTodo={handleSaveTodo} />
       {todos?.length === 0 ? (
         <div className="empty">
           <h1>No todos</h1>
         </div>
       ) : (
-        <div>
+        <div className="listTodos">
           {todos?.map((todo: ITodo) => (
             <TodoItem
               key={todo._id}

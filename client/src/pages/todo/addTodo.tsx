@@ -25,6 +25,7 @@ const AddTodo: React.FC<Props> = ({ saveTodo }) => {
             type="text"
             id="task"
             placeholder="Write Todo"
+            required
           />
         </div>
       </div>
@@ -32,7 +33,7 @@ const AddTodo: React.FC<Props> = ({ saveTodo }) => {
         className="button__add"
         disabled={formData === undefined ? true : false}
       >
-        Add Todo
+        Add
       </button>
     </form>
   );

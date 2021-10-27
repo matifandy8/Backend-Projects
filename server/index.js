@@ -3,10 +3,10 @@ let mongoose = require("mongoose");
 let cors = require("cors");
 let bodyParser = require("body-parser");
 let mongoDb = require("./db");
+const ytdl = require("ytdl-core");
 
 const TodoRoute = require("./todo.route");
 const NewsRoute = require("./news.route");
-const YoutubeRoute = require("./youtube.route");
 
 
 
@@ -36,7 +36,6 @@ app.use(
 app.use(cors());
 app.use("/", TodoRoute);
 app.use("/news", NewsRoute);
-app.use("/youtube", YoutubeRoute);
 
 
 

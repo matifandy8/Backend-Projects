@@ -4,3 +4,6 @@
   align-items: center;
   flex-direction: column;
 }
+.listTodos{
+  margin-bottom: 40px;
+}
