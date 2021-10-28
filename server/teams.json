@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Boston Celtics",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/334.svg"
+  },
+  {
+    "name": "Brooklyn Nets",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/349.svg"
+  },
+  {
+    "name": "New York Knicks",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/350.svg"
+  },
+  {
+    "name": "Philadelphia 76ers",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/352.svg"
+  },
+  {
+    "name": "Toronto Raptors",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/358.svg"
+  },
+  {
+    "name": "Chicago Bulls",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/336.svg"
+  },
+  {
+    "name": "Cleveland Cavaliers",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/337.svg"
+  },
+  {
+    "name": "Detroit Pistons",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/340.svg"
+  },
+  {
+    "name": "Indiana Pacers",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/343.svg"
+  },
+  {
+    "name": "Milwaukee Bucks",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/347.svg"
+  },
+  {
+    "name": "Atlanta Hawks",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/333.svg"
+  },
+  {
+    "name": "Charlotte Hornets",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/448283.svg"
+  },
+  {
+    "name": "Miami Heat",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/346.svg"
+  },
+  {
+    "name": "Orlando Magic",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/351.svg"
+  },
+  {
+    "name": "Washington Wizards",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/361.svg"
+  },
+  {
+    "name": "Denver Nuggets",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/339.svg"
+  },
+  {
+    "name": "Minnesota Timberwolves",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/348.svg"
+  },
+  {
+    "name": "Oklahoma City Thunder",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/1628527.svg"
+  },
+  {
+    "name": "Portland Trail Blazers",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/354.svg"
+  },
+  {
+    "name": "Utah Jazz",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/359.svg"
+  },
+  {
+    "name": "Golden State Warriors",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/341.svg"
+  },
+  {
+    "name": "Los Angeles Clippers",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/344.svg"
+  },
+  {
+    "name": "Los Angeles Lakers",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/345.svg"
+  },
+  {
+    "name": "Phoenix Suns",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/353.svg"
+  },
+  {
+    "name": "Sacramento Kings",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/355.svg"
+  },
+  {
+    "name": "Dallas Mavericks",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/338.svg"
+  },
+  {
+    "name": "Houston Rockets",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/342.svg"
+  },
+  {
+    "name": "Memphis Grizzlies",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/360.svg"
+  },
+  {
+    "name": "New Orleans Pelicans",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/335.svg"
+  },
+  {
+    "name": "San Antonio Spurs",
+    "image": "https://sports.cbsimg.net/fly/images/nba/logos/team/356.svg"
+  }
+]

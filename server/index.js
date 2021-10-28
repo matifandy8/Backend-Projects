@@ -6,7 +6,8 @@ let mongoDb = require("./db");
 const ytdl = require("ytdl-core");
 
 const TodoRoute = require("./todo.route");
-const NewsRoute = require("./news.route");
+const NBARoute = require("./nba.route");
+
 
 
 
@@ -35,7 +36,7 @@ app.use(
 
 app.use(cors());
 app.use("/", TodoRoute);
-app.use("/news", NewsRoute);
+app.use("/", NBARoute);
 
 
 
