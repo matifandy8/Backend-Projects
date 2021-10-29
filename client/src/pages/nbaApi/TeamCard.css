@@ -1,0 +1,14 @@
+.TeamCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 20px;
+  background-color: white;
+  width: 12rem;
+}
+.TeamCard__image {
+  height: 50px;
+  width: 50px;
+  margin: 15px;
+}

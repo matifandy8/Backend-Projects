@@ -14,3 +14,8 @@ type ApiDataType = {
   todos: ITodo[];
   todo?: ITodo;
 };
+
+interface ITeam {
+  name: string;
+  image: string;
+}
