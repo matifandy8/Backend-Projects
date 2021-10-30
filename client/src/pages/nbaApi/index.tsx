@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { getTeams } from "../../helpers/ApiNba";
 import TeamCard from "./TeamCard";
+import "./index.css"
+import Loading from "../../utils/loading";
 
 const NbaApi: React.FC = () => {
   const [teams, setTeams] = useState<ITeam[] | any>([]);
@@ -21,7 +23,7 @@ const NbaApi: React.FC = () => {
       <h1>Nba Api</h1>
       {teams?.length === 0 ? (
         <div className="loading">
-          <h1>Loading</h1>
+        <Loading/>
         </div>
       ) : (
         <div className="listTeams">

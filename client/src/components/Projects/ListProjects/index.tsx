@@ -18,7 +18,7 @@ const ListProjects: React.FC = () => {
         <CardProject
           id={3}
           name="NbaApi"
-          image="https://replace.com.bo/files/scraping-la-extraccion-de-datos-de-sitios-web.png"
+          image="https://as01.epimg.net/baloncesto/imagenes/2021/08/04/nba/1628075599_241755_1628075753_noticia_normal_recorte1.jpg"
         />
         <CardProject
           id={4}
