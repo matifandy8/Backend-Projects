@@ -16,6 +16,7 @@ type ApiDataType = {
 };
 
 interface ITeam {
+  id: number;
   name: string;
   image: string;
 }

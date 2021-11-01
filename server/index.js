@@ -5,8 +5,8 @@ let bodyParser = require("body-parser");
 let mongoDb = require("./db");
 const ytdl = require("ytdl-core");
 
-const TodoRoute = require("./todo.route");
-const NBARoute = require("./nba.route");
+const TodoRoute = require("./routes/todo.route");
+const NBARoute = require("./routes/nba.route");
 
 
 

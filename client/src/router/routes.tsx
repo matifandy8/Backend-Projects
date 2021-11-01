@@ -13,6 +13,7 @@ export const Routes: React.FC = () => {
         <Route exact path="/youtubeDownloader" component={YoutubeDownloader} />
         <Route exact path="/todo" component={Todo} />
         <Route exact path="/NbaApi" component={NbaApi} />
+        <Route exact path="/NbaApi/teams/:id" component={NbaApi} />
         <Redirect to="/" />
       </Switch>
     </Layout>

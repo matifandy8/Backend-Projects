@@ -1,10 +1,13 @@
+import { Link } from "react-router-dom";
 import "./TeamCard.css";
 
-const TeamCard = ({ name, image }: ITeam) => {
+const TeamCard = ({id, name, image }: ITeam) => {
   return (
-    <div className="TeamCard">
+    <div key={id} className="TeamCard">
+      <Link to={`NbaApi/teams/${id}`}>
       <p>{name}</p>
       <img className="TeamCard__image" src={image} alt={name} />
+      </Link>
     </div>
   );
 };

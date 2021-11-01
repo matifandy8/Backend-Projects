@@ -28,7 +28,9 @@ const NbaApi: React.FC = () => {
       ) : (
         <div className="listTeams">
           {teams?.map((team: ITeam) => (
-            <TeamCard name={team.name} image={team.image} />
+            <div key={team.id}>
+              <TeamCard id={team.id} name={team.name} image={team.image} />
+            </div>
           ))}
         </div>
       )}

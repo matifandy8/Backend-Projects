@@ -2,7 +2,7 @@ let mongoose = require("mongoose");
 let express = require("express");
 let router = express.Router();
 
-let todoSchema = require("./Todo");
+let todoSchema = require("../models/Todo");
 
 router.route("/todos").get((req, res, next) => {
   todoSchema.find((error, data) => {

@@ -5,14 +5,22 @@ const axios = require("axios")
 const cheerio = require("cheerio")
 const fs = require("fs");
 let router = express.Router();
-
 let data = fs.readFileSync('./teams.json')
 let teams = JSON.parse(data)
 
-router.route("/nba/teams").get((req, res) => {
+router.route("/nba/teams").get((req, res ,next) => {
   res.json(teams);
+  if (err) return next(err);
 });
- 
+ router.route("/nba/teams/:id").get((req, res, next) => {
+  let id = req.params.id;
+  for (let team of teams) {
+   if(team.id === id){
+    return res.json(team)
+   }
+  }
+  if (err) return next(err);
+ });
 
 
 // async function getNews(){
