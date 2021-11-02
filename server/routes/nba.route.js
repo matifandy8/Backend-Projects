@@ -9,7 +9,7 @@ let data = fs.readFileSync('./teams.json')
 let teams = JSON.parse(data)
 
 router.route("/nba/teams").get((req, res ,next) => {
-  res.json(teams);
+  return res.json(teams);
   if (err) return next(err);
 });
  router.route("/nba/teams/:id").get((req, res, next) => {
@@ -90,7 +90,7 @@ async function getStatsPlayer() {
 
 router.route("/nba/stats/player").get( async (req, res) => {
   const teams = await getStatsPlayer();
-  res.json(teams)
+  return res.json(teams)
 });
 
 
