@@ -5,6 +5,7 @@ import Todo from "../pages/todo";
 import YoutubeDownloader from "../pages/youtubeDownloader";
 import NbaApi from "../pages/nbaApi";
 import Teams from "../pages/nbaApi/Teams";
+import LiveChat from "../pages/chat";
 
 export const Routes: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ export const Routes: React.FC = () => {
         <Route exact path="/" component={Home} />
         <Route exact path="/youtubeDownloader" component={YoutubeDownloader} />
         <Route exact path="/todo" component={Todo} />
+        <Route exact path="/Chat" component={LiveChat} />
         <Route exact path="/NbaApi" component={NbaApi} />
         <Route exact path="/NbaApi/teams" component={Teams} />
         <Route exact path="/NbaApi/teams/:id" component={NbaApi} />
