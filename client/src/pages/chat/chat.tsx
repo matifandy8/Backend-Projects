@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ScrollToBottom from "react-scroll-to-bottom";
-
+import "./chat.css";
 
 type Props = {
   socket: any;
@@ -25,14 +25,14 @@ const Chat: React.FC<Props> = ({ socket, username, room }) => {
       };
 
       await socket.emit("send_message", messageData);
-      setMessageList((list:any) => [...list, messageData]);
+      setMessageList((list: any) => [...list, messageData]);
       setCurrentMessage("");
     }
   };
 
   useEffect(() => {
-    socket.on("receive_message", (data:any) => {
-      setMessageList((list:any) => [...list, data]);
+    socket.on("receive_message", (data: any) => {
+      setMessageList((list: any) => [...list, data]);
     });
   }, [socket]);
 
@@ -43,7 +43,7 @@ const Chat: React.FC<Props> = ({ socket, username, room }) => {
       </div>
       <div className="chat-body">
         <ScrollToBottom className="message-container">
-          {messageList.map((messageContent:any) => {
+          {messageList.map((messageContent: any) => {
             return (
               <div
                 className="message"
@@ -54,8 +54,8 @@ const Chat: React.FC<Props> = ({ socket, username, room }) => {
                     <p>{messageContent.message}</p>
                   </div>
                   <div className="message-meta">
-                    <p id="time">{messageContent.time}</p>
-                    <p id="author">{messageContent.author}</p>
+                    <p className="author">{messageContent.author}</p>
+                    <p className="time">{messageContent.time}</p>
                   </div>
                 </div>
               </div>
@@ -79,6 +79,6 @@ const Chat: React.FC<Props> = ({ socket, username, room }) => {
       </div>
     </div>
   );
-}
+};
 
 export default Chat;

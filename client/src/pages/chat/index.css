@@ -1,0 +1,38 @@
+.title {
+  margin-top: 50px;
+}
+.joinChatContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+.input {
+  padding: 10px;
+  display: inline-block;
+  height: auto;
+  margin-bottom: 0;
+  border: 1px none #000;
+  background-color: transparent;
+  color: #000;
+  font-size: 1.125em;
+}
+.input:focus {
+  outline: none;
+}
+.joinRoom {
+  cursor: pointer;
+  width: 175px;
+  margin-top: 0;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: none;
+  font-family: "Roboto Mono", monospace;
+}
+
+.joinRoom:hover {
+  color: rgb(92, 92, 92);
+}

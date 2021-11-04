@@ -4,13 +4,15 @@ let cors = require("cors");
 let bodyParser = require("body-parser");
 let mongoDb = require("./db");
 const ytdl = require("ytdl-core");
+const { Server } = require("socket.io");
+const http = require("http");
 
 const TodoRoute = require("./routes/todo.route");
 const NBARoute = require("./routes/nba.route");
 
 
 
-
+// DATABASE CONNECTION
 mongoose.Promise = global.Promise;
 mongoose
   .connect(mongoDb.database, {
@@ -35,14 +37,43 @@ app.use(
 );
 
 app.use(cors());
+
+// ROUTES
 app.use("/", TodoRoute);
 app.use("/", NBARoute);
 
 
 
-const port = process.env.PORT || 4000;
-const server = app.listen(port, () => {
-  console.log("Connected on : " + port);
+// SOCKET IO 
+const server = http.createServer(app);
+
+const io = new Server(server, {
+  cors: {
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST"],
+  },
+});
+
+io.on("connection", (socket) => {
+  console.log(`User Connected: ${socket.id}`);
+
+  socket.on("join_room", (data) => {
+    socket.join(data);
+    console.log(`User with ID: ${socket.id} joined room: ${data}`);
+  });
+
+  socket.on("send_message", (data) => {
+    socket.to(data.room).emit("receive_message", data);
+  });
+
+  socket.on("disconnect", () => {
+    console.log("User Disconnected", socket.id);
+  });
+});
+
+
+server.listen(4000, () => {
+  console.log("SERVER RUNNING");
 });
 
 app.use(function (err, req, res, next) {
