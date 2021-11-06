@@ -18,7 +18,7 @@ export const Routes: React.FC = () => {
         <Route exact path="/NbaApi" component={NbaApi} />
         <Route exact path="/NbaApi/teams" component={Teams} />
         <Route exact path="/NbaApi/teams/:id" component={NbaApi} />
-        <Redirect to="/" />
+        {/* <Redirect to="/" /> */}
       </Switch>
     </Layout>
   );

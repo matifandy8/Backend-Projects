@@ -3,14 +3,12 @@ let mongoose = require("mongoose");
 let cors = require("cors");
 let bodyParser = require("body-parser");
 let mongoDb = require("./db");
-const ytdl = require("ytdl-core");
 const { Server } = require("socket.io");
 const http = require("http");
 
 const TodoRoute = require("./routes/todo.route");
 const NBARoute = require("./routes/nba.route");
-
-
+const YoutubeRoute = require("./routes/youtube.route");
 
 // DATABASE CONNECTION
 mongoose.Promise = global.Promise;
@@ -41,10 +39,9 @@ app.use(cors());
 // ROUTES
 app.use("/", TodoRoute);
 app.use("/", NBARoute);
+app.use("/", YoutubeRoute);
 
-
-
-// SOCKET IO 
+// SOCKET IO
 const server = http.createServer(app);
 
 const io = new Server(server, {
@@ -70,7 +67,6 @@ io.on("connection", (socket) => {
     console.log("User Disconnected", socket.id);
   });
 });
-
 
 server.listen(4000, () => {
   console.log("SERVER RUNNING");
