@@ -1,3 +1,6 @@
+import "./Download.css"
+
+
 const Download = ({ url, img, title, videoformats }: any) => {
   const downloadFile = (itag:any, type:any) => {
     console.log(itag, type);
@@ -8,16 +11,17 @@ const Download = ({ url, img, title, videoformats }: any) => {
     );
   };
   return (
-    <div>
-      <h2>{title}</h2>
-      <img src={img} alt="" />
-      <div>
+    <div className="download">
+      <h2 className="download__title">{title}</h2>
+      <img className="download__image" src={img} alt={title} />
+      <div className="download__buttons">
         {videoformats &&
           videoformats.map((format:any, index:any) =>
             format.qualityLabel === null ? (
               ""
             ) : format.hasAudio === true ? (
               <button
+                className="download__button"
                 onClick={() => {
                   downloadFile(format.itag, format.hasVideo);
                 }}

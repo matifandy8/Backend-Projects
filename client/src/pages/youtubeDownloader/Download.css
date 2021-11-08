@@ -1,0 +1,27 @@
+.download__buttons{
+    display: flex;
+    justify-content: center;
+}
+
+
+.download__button{
+    cursor: pointer;
+    width: 175px;
+    margin: 10px;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(214, 213, 213);
+    border: none;
+    font-family: "Roboto Mono", monospace;
+  }
+  
+  .download__image{
+      height: 200px;
+      width: 300px;
+  }
+
+  .download__title{
+      margin: 35px;
+  }
