@@ -22,47 +22,35 @@ router.route("/nba/teams/:id").get((req, res, next) => {
   if (err) return next(err);
 });
 
-// async function getNews(){
-//     const { data } = await axios.get(
-//       "https://www.silverscreenandroll.com/lakers-schedule"
-//     );
-//     const $ = cheerio.load(data);
-//     const cards = $(".c-compact-river__entry ");
-//       console.log(cards.length)
-// }
 
-// getNews()
 
 // CAMBIAR POR ALGO QUE ESTE CAMBIANDO DIA A DIA COMO ESTADISTICAS JUGADORES O EQUIPOS POSICIONES
-async function getStatsPlayer() {
+async function getTeamsPlayers(team) {
   const { data } = await axios.get(
-    "https://www.cbssports.com/nba/stats/player/"
+    `https://www.foxsports.com/nba/${team}-team-roster`
   );
   const $ = cheerio.load(data);
-  const teams = [];
-  $(".StatsTables").each((index, element) => {
+  const players = [];
+  $("tr").each((index, element) => {
     const $element = $(element);
-    const title = $element.find(".Card-titleSeparate").text().replace("\n", "");
-    const leadername = $element.find(".PlayerName a").text().replace("\n", "");
-    const playername = $element.find(".CellPlayerName--long span a").text();
-    const statnumberleader = $element
-      .find(".StatsLeadersCard-statValue")
-      .text()
-      .replace("\n", "");
-    const statnumberpayer = $element
-      .find(".TableBase-bodyTd.TableBase-bodyTd--number")
-      .text();
-
-    const team = {
-      title,
-      leadername,
-      playername,
-      statnumberleader,
-      statnumberpayer,
+    const name = $element.find(".table-entity-name.ff-s").text();
+    const image = $element.find(".cell-logo.table-logo.player-headshot.image-headshot img").attr("src");
+    const position = $element.find("td:nth-child(2)").text().replace(/(\s+)/g, '');
+    const age = $element.find("td:nth-child(3)").text().replace(/(\s+)/g, '');
+    const heigth = $element.find("td:nth-child(4)").text().replace(/(\s+)/g, '');
+    const weight = $element.find("td:nth-child(5)").text().replace(/(\s+)/g, '');
+    console.log(name === "");
+    const player= {
+      name,
+      image,
+      position,
+      age,
+      heigth,
+      weight,
     };
-    teams.push(team);
+    players.push(player);
   });
-  return teams;
+  return players;
 }
 
 // async function getTeams() {
@@ -84,9 +72,10 @@ async function getStatsPlayer() {
 //   return teams;
 // }
 
-router.route("/nba/stats/player").get(async (req, res) => {
-  const teams = await getStatsPlayer();
-  return res.json(teams);
+router.route("/nba/name").get(async (req, res) => {
+  let nameteam = "cleveland-cavaliers"
+  const players = await getTeamsPlayers(nameteam);
+  return res.json(players);
 });
 
 module.exports = router;

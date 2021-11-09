@@ -6,6 +6,7 @@ import YoutubeDownloader from "../pages/youtubeDownloader";
 import NbaApi from "../pages/nbaApi";
 import Teams from "../pages/nbaApi/Teams";
 import LiveChat from "../pages/chat";
+import Team from "../pages/nbaApi/team/Team";
 
 export const Routes: React.FC = () => {
   return (
@@ -17,7 +18,7 @@ export const Routes: React.FC = () => {
         <Route exact path="/Chat" component={LiveChat} />
         <Route exact path="/NbaApi" component={NbaApi} />
         <Route exact path="/NbaApi/teams" component={Teams} />
-        <Route exact path="/NbaApi/teams/:id" component={NbaApi} />
+        <Route exact path="/NbaApi/teams/:id" component={Team} />
         {/* <Redirect to="/" /> */}
       </Switch>
     </Layout>
